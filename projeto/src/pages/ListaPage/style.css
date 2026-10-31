@@ -1,0 +1,83 @@
+.lista-page {
+  display: flex;
+  justify-content: center;
+}
+
+.lista-panel {
+  width: min(100%, 960px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(17, 17, 17, 0.06);
+  border-radius: 30px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+}
+
+.panel-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.panel-header h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.07em;
+  color: #1d1d1f;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  background: rgba(248, 248, 250, 0.9);
+  color: #1d1d1f;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.students-list {
+  display: grid;
+  gap: 14px;
+}
+
+.student-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(245, 245, 247, 0.9);
+  border: 1px solid rgba(17, 17, 17, 0.06);
+}
+
+.student-name,
+.student-email,
+.student-phone {
+  color: #1d1d1f;
+}
+
+.student-name {
+  font-weight: 600;
+}
+
+.student-email,
+.student-phone {
+  color: #424245;
+}
+
+@media (max-width: 720px) {
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .student-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
